@@ -12,6 +12,6 @@ const parseDays = (day) => {
   }
   return -1;
 };
-let day = 'Fri';
-console.log(parseDays(day));
+
+
 module.exports = parseDays;
