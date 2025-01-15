@@ -9,8 +9,7 @@ const types = (array) => {
     boolean: 0,
   };
   for (const element of array) {
-    const type = typeof element;
-    listOfTypes[type]++;
+   listOfTypes[typeof element]++;
   }
   return listOfTypes;
 };
