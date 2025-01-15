@@ -2,26 +2,16 @@
 // Find an intersection of two dictionaries
 'use strict';
 
-const intersection = (object_1, object_2) => {
-  let first_keys = Object.keys(object_1);
-  {
-  }
-  for (let attribute_name of first_keys) {
-    if (object_1[attribute_name] === object_2[attribute_name]) {
-      object_2[attribute_name] = object_1[attribute_name];
-      {
-      }
+const intersection = (firstDict, secondDict) => {
+  const firstKeys = Object.keys(firstDict);
+  for (const attributeName of firstKeys) {
+    if (firstDict[attributeName] === secondDict[attributeName]) {
+      secondDict[attributeName] = firstDict[attributeName];
     } else {
-      delete object_1[attribute_name];
-      {
-      }
-    }
-    {
+      delete firstDict[attributeName];
     }
   }
-  {
-  }
-  return object_1;
+  return firstDict;
 };
 
 module.exports = intersection;
