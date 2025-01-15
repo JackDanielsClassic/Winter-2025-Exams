@@ -2,17 +2,17 @@
 // Count types in an array
 'use strict';
 
-const types = (s) => {
-  const types = {
+const types = (array) => {
+  const listOfTypes = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (const i of s) {
-    const t = typeof i;
-    types[t]++;
+  for (const element of array) {
+    const type = typeof element;
+    listOfTypes[type]++;
   }
-  return types;
+  return listOfTypes;
 };
 
 module.exports = types;
