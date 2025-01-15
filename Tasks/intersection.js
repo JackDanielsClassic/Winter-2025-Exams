@@ -3,15 +3,13 @@
 'use strict';
 
 const intersection = (firstDict, secondDict) => {
-  const firstKeys = Object.keys(firstDict);
-  for (const attributeName of firstKeys) {
-    if (firstDict[attributeName] === secondDict[attributeName]) {
-      secondDict[attributeName] = firstDict[attributeName];
-    } else {
-      delete firstDict[attributeName];
-    }
+  const result = {};
+  for (const key in firstDict) {
+    if (firstDict[key] === secondDict[key]) {
+      result[key] = firstDict[key];
+    } 
   }
-  return firstDict;
+  return result;
 };
 
 module.exports = intersection;
